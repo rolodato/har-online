@@ -5,16 +5,17 @@ A command-line tool to view HAR files at [Jan Odvarko's HAR viewer](http://www.s
 ## Installation
 
 ```sh
+$ npm install -g har-online
 ```
 
 ## Usage
 
 ```sh
 # Read from stdin
-$ har < local.har
+$ har < filename.har
 
 # Read from a file
-$ har local.har
+$ har filename.har
 
 # Read from a remote URL
 $ har http://www.janodvarko.cz/har/viewer/examples/inline-scripts-block.harp
