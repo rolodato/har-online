@@ -18,7 +18,7 @@ $ har < filename.har
 $ har filename.har
 
 # Read from a remote URL
-$ har http://www.janodvarko.cz/har/viewer/examples/inline-scripts-block.harp
+$ har http://www.janodvarko.cz/har/viewer/examples/inline-scripts-block.har
 ```
 
 All commands will output a URL that can be used to visualize the contents of the supplied HAR file.
