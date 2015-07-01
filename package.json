@@ -1,0 +1,27 @@
+{
+  "name": "har-online",
+  "version": "0.0.0",
+  "description": "View HAR files at http://www.softwareishard.com/har/viewer/",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:rolodato/har-online.git"
+  },
+  "author": "Rodrigo López Dato",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/rolodato/har-online/issues"
+  },
+  "homepage": "https://github.com/rolodato/har-online",
+  "main": "./har.js",
+  "bin": {
+    "har": "./har.js"
+  },
+  "dependencies": {
+    "open": "0.0.5",
+    "github": "0.2.4",
+    "bluebird": "2.9.30",
+    "valid-url": "1.0.9",
+    "request": "2.58.0"
+  }
+}
