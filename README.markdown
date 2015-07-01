@@ -12,18 +12,17 @@ $ npm install -g har-online
 
 ## Usage
 
+`har` accepts UTF-8 formatted HAR through standard input.
+
 ```sh
-# Read from stdin
+# Read from file
 $ har < filename.har
 
-# Read from a file
-$ har filename.har
-
 # Read from a remote URL
-$ har http://www.janodvarko.cz/har/viewer/examples/inline-scripts-block.har
+$ wget -qO- http://www.janodvarko.cz/har/viewer/examples/inline-scripts-block.har | har
 ```
 
-All commands will output a URL that can be used to visualize the contents of the supplied HAR file.
+`har` will output a URL that can be used to visualize the contents of the supplied input.
 
 ## How it works
 
@@ -31,5 +30,4 @@ Files are modified to add padding (JSONP) and uploaded as anonymous, private gis
 
 ## TODO
 
-* Upload multiple HAR files at once
 * Support arbitrary HAR viewer instances (config file)

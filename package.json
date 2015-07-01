@@ -1,6 +1,6 @@
 {
   "name": "har-online",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "View HAR files at http://www.softwareishard.com/har/viewer/",
   "main": "index.js",
   "repository": {
@@ -18,9 +18,6 @@
     "har": "./har.js"
   },
   "dependencies": {
-    "github": "0.2.4",
-    "bluebird": "2.9.30",
-    "valid-url": "1.0.9",
-    "request": "2.58.0"
+    "github": "0.2.4"
   }
 }

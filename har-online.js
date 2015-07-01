@@ -1,5 +1,4 @@
 var GitHubApi = require("github");
-var Promise = require("bluebird");
 
 var github = new GitHubApi({
     version: "3.0.0",
@@ -10,7 +9,11 @@ function harViewerJsonp(harObject) {
     return "onInputData(" + JSON.stringify(harObject) + ");";
 }
 
-function harUrl(harObject) {
+function viewerUrl(fileUrl) {
+    return "http://www.softwareishard.com/har/viewer?inputUrl=" + fileUrl;
+}
+
+function harUrl(harObject, cb) {
     // Gists require a filename, so we use a timestamp
     var filename = Date.now().toString();
     var gistOptions = {
@@ -20,10 +23,13 @@ function harUrl(harObject) {
     gistOptions.files[filename] = {
         content: harViewerJsonp(harObject)
     };
-    var createGist = Promise.promisify(github.gists.create);
-    return createGist(gistOptions).then(function (res) {
-        var gist = res.files[filename].raw_url;
-        return 'http://www.softwareishard.com/har/viewer?inputUrl=' + gist;
+    github.gists.create(gistOptions, function (err, res) {
+        if (err) {
+            return cb(err);
+        } else {
+            var gist = res.files[filename].raw_url;
+            return cb(null, viewerUrl(gist));
+        }
     });
 }
 
