@@ -1,6 +1,6 @@
 {
   "name": "har-online",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "View HAR files at http://www.softwareishard.com/har/viewer/",
   "main": "index.js",
   "repository": {

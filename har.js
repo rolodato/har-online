@@ -32,7 +32,6 @@ function tryJson(str) {
 function harFromInput(input) {
     var json = tryJson(input);
     if (validUrl.isUri(input)) {
-        console.log("url");
         return request(input).spread(function (res, body) {
             return harUrl(JSON.parse(body));
         });
