@@ -15,7 +15,7 @@ function viewerUrl(fileUrl) {
 
 function harUrl(harObject, cb) {
     // Gists require a filename, so we use a timestamp
-    var filename = Date.now().toString();
+    var filename = Date.now().toString() + ".js";
     var gistOptions = {
         public: false,
         files: {}
