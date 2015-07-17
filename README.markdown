@@ -27,6 +27,7 @@ $ wget -qO- http://www.janodvarko.cz/har/viewer/examples/inline-scripts-block.ha
 ## How it works
 
 Files are modified to add padding (JSONP) and uploaded as anonymous, private gists over TLS.
+[RawGit](https://rawgit.com/) links are used to supply the correct MIME types.
 
 ## TODO
 
