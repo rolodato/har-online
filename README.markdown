@@ -1,5 +1,7 @@
 # har-online
 
+## Note: this is currently broken as RawGit does not allow anonymous gists anymore. Will fix this soon.
+
 A command-line tool to view HAR files at [Jan Odvarko's HAR viewer](http://www.softwareishard.com/har/viewer/).
 
 ![](http://g.recordit.co/aA7qwJ4835.gif)
